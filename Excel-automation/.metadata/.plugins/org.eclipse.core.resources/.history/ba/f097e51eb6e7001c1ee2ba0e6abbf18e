@@ -1,0 +1,127 @@
+package com.sgtesting.pageobjectmodel;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ActiTimePage {
+public ActiTimePage(WebDriver oBrowser)
+{
+	PageFactory.initElements(oBrowser, this);
+}
+
+
+//UserName Text Field
+private WebElement Lusername;
+public WebElement getUserName()
+{
+	return Lusername  ;
+}
+//Password Text Field
+private WebElement pwd;
+public WebElement getPassword()
+{
+	return pwd;
+}
+
+//Login button field
+@FindBy(xpath="//div[text()='Login ']")
+private WebElement oLogin;
+public WebElement getLogin()
+{
+	return oLogin;
+}
+
+//FlyOutwindow field
+private WebElement gettingStartedShortcutsPanelId;
+public WebElement getFlyOutWindow()
+{
+	return gettingStartedShortcutsPanelId;
+}
+//click on add user button
+@FindBy(xpath="//*[@id=\"topnav\"]/tbody/tr[1]/td[5]/a/div[2]")
+private  WebElement oUser;
+public WebElement getUser()
+{
+	return oUser;
+	
+}
+
+
+//click on add user
+@FindBy(xpath="//*[@id=\"createUserDiv\"]/div/div[1]")
+private WebElement oAddUser;
+public WebElement getAddUser()
+{
+	return oAddUser;
+	
+}
+
+//add First name
+private WebElement firstName;
+public WebElement getfirstName()
+{
+	return firstName;
+	
+}
+//add last Name
+private WebElement lastName;
+public WebElement getLastName() {
+	return lastName;
+
+	
+}
+//add email
+private WebElement email;
+public WebElement getemail()
+{
+	return email;
+	
+}
+//add Username
+private WebElement username;
+public WebElement getusername()
+{
+	return username;
+	
+}
+//add password
+private WebElement password;
+public WebElement getpassword()
+{
+	return password;
+	
+}
+//add passwordCopy
+private WebElement passwordCopy;
+public WebElement getpasswordCopy()
+{
+	return passwordCopy;
+	
+}
+//click createUser
+@FindBy(xpath="//*[@id=\"userDataLightBox_commitBtn\"]")
+private WebElement CreateUser;
+public WebElement getCreateUser()
+{
+	return CreateUser;
+	
+}
+
+
+//Logout Link
+@FindBy(linkText="Logout")
+private WebElement oLogout;
+public WebElement getLogout()
+{
+	return oLogout;
+}
+public WebElement getFirstName() {
+	return firstName;
+}
+public void setFirstName(WebElement firstName) {
+	this.firstName = firstName;
+}
+
+}

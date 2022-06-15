@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="tests">
+	<test name="BasicScenarios">
+		<classes>
+			<class name="com.sgtesting.basicscenario.ScenarioOne"></class>
+			<class name="com.sgtesting.basicscenario.ScenarioTwo"></class>
+			<class name="com.sgtesting.basicscenario.ScenarioThree"></class>
+			<class name="com.sgtesting.basicscenario.ScenarioFour"></class>
+			<class name="com.sgtesting.basicscenario.ScenarioFive"></class>
+			<class name="com.sgtesting.basicscenario.ScenarioSix"></class>
+			<class name="com.sgtesting.basicscenario.ScenarioSeven"></class>
+		</classes>
+	</test>
+</suite>

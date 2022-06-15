@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="tests">
+	<test name="BasicScenarios">
+		<classes>
+			<class name="com.sgtesting.testng.Basic1"></class>
+			<class name="com.sgtesting.testng.Basic2"></class>
+			<class name="com.sgtesting.testng.Basic3"></class>
+			<class name="com.sgtesting.testng.Basic4"></class>
+			<class name="com.sgtesting.testng.Basic5"></class>
+			<class name="com.sgtesting.testng.Basic6"></class>
+			<class name="com.sgtesting.testng.Basic7"></class>
+		</classes>
+	</test>
+</suite>

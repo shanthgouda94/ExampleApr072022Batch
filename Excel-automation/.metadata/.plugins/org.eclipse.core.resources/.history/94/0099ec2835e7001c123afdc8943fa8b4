@@ -1,0 +1,86 @@
+package com.sgtesting.pageobjectmodel;
+
+import java.nio.file.attribute.AclEntry;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Scenario1 {
+public static WebDriver oBrowser=null;
+public static ActiTimePage oPage=null;
+public static void main(String args[])
+{
+	LaunchBrowser();
+	navigate();
+	login();
+	minimizeFlyoutWindow();
+	Logout();
+}
+private static void LaunchBrowser()
+{
+	try {
+		System.setProperty("webdriver.chrome.driver", "E:\\SeleniumAutomation\\Automation\\Excel-automation\\web-automation\\Library\\driver\\chromedriver.exe");
+		oBrowser=new ChromeDriver();
+		oPage=new ActiTimePage(oBrowser);
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+	private static void navigate()
+	{
+		try {
+			oBrowser.get("http://localhost:82/login.do");
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+	}
+	private static void login()
+	{
+		try {
+			oPage.getUserName().sendKeys("admin");
+			oPage.getPassword().sendKeys("manager");
+			oPage.getLogin().click();
+			Thread.sleep(2000);
+		} catch (Exception e) {
+		
+		}
+	}
+	private static void minimizeFlyoutWindow() {
+		try {
+			oPage.getFlyOutWindow().click();
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	private static void createUser()
+	{
+		try {
+			oPage.getAddUser().click();
+			Thread.sleep(1000);
+			oPage.getAddUser().click();
+			oPage.getFirstName().sendKeys("user");
+			oPage.getLastName().sendKeys("1");
+			oPage.getemail().sendKeys("user@gmail.com");
+			oPage.getUserName().sendKeys("basava");
+			oPage.getpassword().sendKeys("1234");
+			oPage.getpasswordCopy().sendKeys("1234");
+			oPage.getCreateUser().click();
+			Thread.sleep(2000);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+		private static void Logout(){
+			try
+			{
+				oPage.getLogout().click();
+				Thread.sleep(2000);
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+}
